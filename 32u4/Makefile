@@ -7,7 +7,7 @@ F_CPU=8000000UL
 CFLAGS=-mmcu=atmega32u4 -I$(INCDIR) -Wall -DF_CPU=$(F_CPU) -Os
 LFLAGS=$(CFLAGS)
 # AVRDUDE_FLAGS=-p atmega32u4 -c usbtiny
-AVRDUDE_FLAGS=-p atmega32u4 -c avr109 -P /dev/ttyACM0
+AVRDUDE_FLAGS=-p atmega32u4 -c avr109
 
 CROSS_COMPILE=avr-
 CC=$(CROSS_COMPILE)gcc
