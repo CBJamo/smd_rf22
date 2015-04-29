@@ -1,4 +1,5 @@
 //#include <uapi/linux/if_arp.h>
+#include <linux/module.h>
 #include <linux/hoperfdevice.h>
 #include <linux/if_ether.h>
 #include <linux/if_hoperf.h>
@@ -257,3 +258,6 @@ struct net_device *alloc_hoperfdev_mqs( int sizeof_priv, unsigned int txqs,
 	return alloc_netdev_mqs( sizeof_priv, "rf%d", NET_NAME_ENUM, hoperf_setup, txqs, rxqs );
 }
 EXPORT_SYMBOL( alloc_hoperfdev_mqs );
+
+MODULE_LICENSE( "GPL" );
+
