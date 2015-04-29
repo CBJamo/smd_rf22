@@ -254,6 +254,6 @@ EXPORT_SYMBOL( hoperf_setup );
 struct net_device *alloc_hoperfdev_mqs( int sizeof_priv, unsigned int txqs,
 	unsigned int rxqs )
 {
-	return alloc_netdev_mqs( sizeof_priv, "rf%d", hoperf_setup, txqs, rxqs );
+	return alloc_netdev_mqs( sizeof_priv, "rf%d", NET_NAME_ENUM, hoperf_setup, txqs, rxqs );
 }
 EXPORT_SYMBOL( alloc_hoperfdev_mqs );
